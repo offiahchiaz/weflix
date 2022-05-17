@@ -1,10 +1,20 @@
-import { Container, Inner, Pane, Title, SubTitle, Image } from "./styles/Jumbotron"
+import { 
+  Container, 
+  Inner, 
+  Item, 
+  Pane, 
+  Title, 
+  SubTitle, 
+  Image 
+} from "./styles/jumbotron"
 
-export const Jumbotron = ({ children, direction = 'row', ...restProps }) => {
+export default function Jumbotron({ children, direction = 'row', ...restProps }) {
   return (
-    <Inner direction={direction}>
-      {children}
-    </Inner>
+    <Item {...restProps}>
+      <Inner direction={direction}>
+        {children}
+      </Inner>
+    </Item>
   )
 }
 
