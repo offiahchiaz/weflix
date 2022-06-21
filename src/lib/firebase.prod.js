@@ -14,7 +14,7 @@ const firebaseConfig = {
 };
 
 // init firebase
-firebase.initializeApp(firebaseConfig)
+const projectFirebase = firebase.initializeApp(firebaseConfig)
 
 // init service
 const projectFirestore = firebase.firestore()
@@ -26,4 +26,4 @@ const timestamp = firebase.firestore.Timestamp
 // Seed firestore database (run only once, then comment it out)
 //seedDatabase(projectFirestore)
 
-export { projectFirestore, projectAuth, timestamp }  
+export { projectFirebase, projectFirestore, projectAuth, timestamp }  
